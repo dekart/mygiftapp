@@ -1,0 +1,6 @@
+development:
+  adapter: mysql
+  database: my_gift_development
+  host: localhost
+  username: root
+  password:

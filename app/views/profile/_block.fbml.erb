@@ -1,0 +1,10 @@
+<b>Sent Gifts:</b>
+  <%= Gift.count(
+        :conditions => ["sender_uid = ?", @user.id]
+      )%>
+<br />
+
+<b>Received Gifts:</b>
+  <%= Gift.count(
+        :conditions => ["receiver_uid = ?", @user.id]
+      )%>

@@ -1,0 +1,15 @@
+<b>Sent Gifts</b>
+<ul>
+<% for gift in @sent_gifts %>
+  <li><%= gift.gift_type.name %> to 
+    <%= fb_name(gift.receiver_uid) %> </li>
+<% end %>
+</ul>
+
+<b>Received Gifts</b>
+<ul>
+<% for gift in @received_gifts %>
+  <li><%= gift.gift_type.name %> from 
+    <%= fb_name(gift.sender_uid) %> </li>
+<% end %>
+</ul>

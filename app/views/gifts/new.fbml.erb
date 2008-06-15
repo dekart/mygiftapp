@@ -1,0 +1,11 @@
+<% @header = "New Gift" %>
+
+<% facebook_form_for @gift do |f| %>
+  <%= f.collection_select :gift_type_id, 
+        GiftType.find(:all), "id", "name", 
+        :label => "Gift Type" %>
+  <%= f.text_area :message %>
+  <%= f.multi_friend_input :label => "Send To" %>
+
+  <%= f.buttons "Send"  %>
+<% end  %>

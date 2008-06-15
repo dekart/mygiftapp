@@ -1,0 +1,13 @@
+<% fb_dashboard do %>
+  <%= fb_create_button "Send Gift", new_gift_path %>
+<% end %>
+
+<% if flash[:success] %>
+  <%= fb_success flash[:success] %>
+<% end  %>
+
+<% fb_tabs do %>
+  <%= fb_tab_item @header, "", :selected => true %>
+<% end %>
+
+<%= yield %>
